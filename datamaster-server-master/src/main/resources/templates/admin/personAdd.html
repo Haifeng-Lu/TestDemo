@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>人员添加</title>
+    <link rel="stylesheet" th:href="@{/css/personAdd.css}">
+</head>
+<body>
+<div id="mainContent">
+    <!--表单-->
+    <form id="userAdd">
+
+        <!--编号-->
+        <div class="row">
+            <div>编号:</div>
+            <input id="patientno" type="number" placeholder="  请输入患者编号"/>
+        </div>
+
+        <!--姓名-->
+        <div class="row">
+            <div>姓名:</div>
+            <input id="patientname" type="text" placeholder="  请输入患者姓名"/>
+        </div>
+
+        <!--性别选项-->
+        <div class="row">
+            <div>性别:</div>
+            <input class="choose" id="male" type="radio" name="sex" value="男" checked="true"/>男
+            <input class="choose" id="female" type="radio" name="sex" value="女"/>女
+        </div>
+
+        <!--年龄-->
+        <div class="row">
+            <div>年龄:</div>
+            <input  id="patientage" type="number" placeholder="  请输入年龄"/>
+        </div>
+
+        <!--病症-->
+        <div class="row">
+            <div>病症:</div>
+            <input  id="patientdiagnosis" type="text" placeholder="  请输入病症"/>
+        </div>
+
+        <!--手机号-->
+        <div class="row">
+            <div>手机号:</div>
+            <input  id="patientphone" type="number" placeholder="  请输入手机号"/>
+        </div>
+
+        <!--教育水平-->
+        <div class="row">
+            <div>受教育水平：</div>
+            <select id="patientedu" name="patientedu">
+                <option value="doctor"/>博士</option>
+                <option value="master">硕士</option>
+                <option value="undergraduate">本科</option>
+                <option value="juniorCollege">大专</option>
+                <option value="highSchool">高中</option>
+                <option value="secondarySpecializedSchool">中专</option>
+                <option value="juniorMiddleSchool">初中</option>
+                <option value="others">其他</option>
+            </select>
+
+
+        </div>
+
+
+
+        <!--提交按钮-->
+        <div class="row">
+            <input id="submintBtn"  onclick="personadd()" align="middle"  type="button"  value="提交"/>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>

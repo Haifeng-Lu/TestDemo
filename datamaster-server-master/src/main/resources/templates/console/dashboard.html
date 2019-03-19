@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>DataMaster: Console Dashboard</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/admin_home.css}"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	
+	
+	<div class="container">
+	
+		<h1>Console Dashboard</h1>
+
+	    <div class="panel-group" style="margin-top:40px">
+	        <div class="panel panel-primary">
+	            <div class="panel-heading">
+	                <span th:utext="${name}"></span>
+	            </div>
+	            <p class="admin-message-text text-center" th:utext="${authorities}"></p>
+	            <p class="admin-message-text text-center" th:utext="${credentials}"></p>
+	            <p class="admin-message-text text-center" th:utext="${details}"></p>
+	            <p class="admin-message-text text-center" th:utext="${principal}"></p>
+	        </div>
+	    </div>
+	    <div>
+	    	<form th:action="@{/logout}" method="get" align="center">
+		        <button class="btn btn-md btn-danger" name="logout"
+		                type="Submit">Logout
+		        </button>
+		    </form>
+	    </div>
+	    
+	
+	</div>
+</body>
+</html>
